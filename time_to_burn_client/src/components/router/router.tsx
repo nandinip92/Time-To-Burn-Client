@@ -2,13 +2,14 @@ import { Routes, Route } from "react-router-dom";
 import { MainLayout } from "../layouts/main_layouts";
 import { Home } from "../home/home";
 import { TimeToBurn } from "../time2burn/time2burn";
+import NotFound from "../not_found/not_found";
 
-export const Router = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<MainLayout />}></Route>
+export const Router = () => (
+  <Routes>
+    <Route path="/" element={<MainLayout />}>
       <Route index element={<Home />} />
       <Route path="/time2burn" element={<TimeToBurn />} />
-    </Routes>
-  );
-};
+      <Route path="*" element={<NotFound />} />
+    </Route>
+  </Routes>
+);
