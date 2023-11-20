@@ -14,6 +14,11 @@ export const Nav = () => (
             TimeToBurn
           </NavLink>
         </li>
+        <li className="hover:bg-nav-text-color">
+          <NavLink to="/activities" className="hover:text-nav-bar-color">
+            Activities List
+          </NavLink>
+        </li>
       </ul>
     </nav>
   </>
